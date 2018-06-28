@@ -1,0 +1,26 @@
+$navWidth: 300px;
+$padding: 1.5em;
+
+
+.site{
+  display: flex;
+}
+
+.nav{
+  background-color: $colorGreyLight;
+  width: $navWidth;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+
+.content{
+  width: calc(100% - #{$navWidth});
+  padding: $padding;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+}

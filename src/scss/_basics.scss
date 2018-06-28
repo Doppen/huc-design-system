@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #0087d4;
+
+}
+
+.smallGrey {
+	font-size: .8em;
+	color: $colorGreyMid;
+}
+
+.light-grey-bg {
+	background-color: $colorGreyLight;
+}
+
+
+pre {
+  background-color: $colorGreyLight;
+  font-size: 12px;
+	padding: .5em;
+	white-space: pre-wrap;
+}
+
+
+
+.icon img, .icon svg{
+   width: 1em;
+   height: auto;
+   cursor: pointer;
+ }
+
+.txt img {
+	width: 100%;
+	height: auto;
+}
+
+.margin8 {
+	margin-top: 8em;
+}

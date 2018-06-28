@@ -1,0 +1,53 @@
+$partnerbar-width: 4em;
+$margin-txt: 3em;
+
+.content {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+}
+
+.content-txt {
+  max-width: 600px;
+  padding: 0em #{$margin-txt} 3em #{$margin-txt};
+}
+
+.pageBlock{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pageBlock p{
+  margin-bottom: 4em;
+}
+
+.colorbar {
+  width: calc(50% - #{$partnerbar-width});
+  background-image: -moz-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
+  background-image: -webkit-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
+  background-image: -ms-linear-gradient( 115deg, #{$colorPrimairy} 11%, #{$colorSecundairy} 100%);
+  position: fixed;
+  height: 100vh;
+  left: 50vw;
+  top: 0;
+
+
+}
+
+.partnerbar {
+  width: $partnerbar-width;
+  background-color: $colorTertiary;
+  color: #fff;
+  position: fixed;
+  height: 100vh;
+  left: calc(100vw - #{$partnerbar-width});
+  top: 0;
+}
+
+.gridDot {
+  fill: $colorPrimairy;
+  transition: all 1s ease;
+  transform-origin: 50% 50%;
+}

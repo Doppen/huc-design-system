@@ -1,0 +1,42 @@
+.illustration {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: .5em;
+
+}
+
+.illustration img{
+  width: 100%;
+  height: auto;
+}
+
+
+
+@media (min-width: 950px) {
+
+  .illu-right {
+    float: right;
+    margin: 1em -25% 1em 1em;
+    width: 50%;
+  }
+
+  .illu-left {
+    float: left;
+    margin: 1em 1em 1em -25%;
+    width: 50%;
+  }
+
+}
+
+
+img[src*='#inText'] {
+
+
+}
+
+
+.illustration-caption{
+  font-size: .75em;
+  line-height: 130%;
+  color: #797878;
+}

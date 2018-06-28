@@ -1,0 +1,67 @@
+{
+  "site-name": "Site",
+  "logo": "test.png",
+  "url": "test.png",
+  "pages": [
+      {
+        "name": "index",
+        "page-meta-keywords": "...",
+        "page-excerpt": "...",
+        "template": "basic",
+        "page-title": "Huc DS",
+        "image": "images/...png",
+        "content":
+        [
+          {
+            "file": "page"
+          }
+        ],
+        "pub-date": "10-06-2018"
+      },
+      {
+        "name": "basics",
+        "page-meta-keywords": "...",
+        "page-excerpt": "...",
+        "template": "basic",
+        "page-title": "basics",
+        "image": "images/...png",
+        "content":
+        [
+          {
+            "file": "page"
+          }
+        ],
+        "pub-date": "10-06-2018"
+      },
+      {
+        "name": "data-entry",
+        "page-meta-keywords": "...",
+        "page-excerpt": "...",
+        "template": "basic",
+        "page-title": "Data entry",
+        "image": "images/...png",
+        "content":
+        [
+          {
+            "file": "page"
+          }
+        ],
+        "pub-date": "10-06-2018"
+      },
+      {
+        "name": "search",
+        "page-meta-keywords": "...",
+        "page-excerpt": "...",
+        "template": "basic",
+        "page-title": "Search",
+        "image": "images/...png",
+        "content":
+        [
+          {
+            "file": "page"
+          }
+        ],
+        "pub-date": "10-06-2018"
+      }
+  ]
+  }

@@ -1,0 +1,73 @@
+
+
+.alignleft {
+  float: left;
+  margin: 0em 1em 0em -2em;
+  width: auto !important;
+}
+
+.alignright {
+  float: right;
+  margin: 0em -2em 0em 1em;
+  width: auto !important;
+}
+
+.aligncenter {
+  width: calc(100% + 2em);
+  height: auto;
+  margin: .5em -1em .5em -1em;
+}
+
+.gallery {
+  margin: 0 -1.5em !important;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    margin: 0 -1.5em !important;
+    display: block;
+  }
+}
+
+
+.wp-caption-text{
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "sans-serif" !important;
+  margin-top: -.3em;
+  color: #999;
+  font-size: .7em;
+  text-align: left;
+}
+
+.pagination {
+  font-size: .7em;
+}
+
+.pagination a{
+  border: 1px solid #d0d0d0;
+  padding: .2em  .3em;
+  margin-left: .5em
+}
+
+.current-menu-item {
+  font-weight: 700;
+}
+
+.current-menu-item ul{
+  font-weight: 300;
+}
+
+.current {
+  border: 1px solid #999;
+  background-color: #999;
+  padding: .2em  .3em;
+  margin-left: .5em;
+  color: #fff;
+}
+nav ul ul {
+  display: none;
+}
+
+.current_page_parent ul, .current_page_item ul {
+  display: block !important;
+}
