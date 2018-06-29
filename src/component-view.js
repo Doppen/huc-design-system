@@ -1,9 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Input, InputMulti, Button, HucForm} from './form';
-import './index.css';
-
-
 
 const md = window.markdownit();
 function asArray(val) {
@@ -183,7 +178,7 @@ class StyleGuide extends React.Component {
 }
 
 
-class DescribedMock extends React.Component {
+export class DescribedMock extends React.Component {
   render() {
     const children = asArray(this.props.children)
       .map(function (child) {
@@ -215,24 +210,20 @@ class DescribedMock extends React.Component {
 }
 
 
-class Embed extends React.Component {
+export class Embed extends React.Component {
   render() {
     return (
       <div>
-      <div style={{fontWeight: "bold"}}>{this.props.caption}</div>
       <div style={{padding: "1em", boxShadow: "inset 0px 0px 10px #000",  borderRadius: 5}}>{this.props.children}</div>
-        <pre>
-          <code>
-            {jsxToString(this.props.children)}
-          </code>
-        </pre>
+      <div style={{textAlign: "right", fontWeight: "bold"}}>{this.props.caption}</div>
+      {jsxToString(this.props.children)}
       </div>
     );
   }
 }
 
 
-class MyComponent extends React.Component {
+export class MyComponent extends React.Component {
   render() {
     return (
       <div style={{border: "thin red solid", width: 100, height: 40}}>MyComponent</div>
@@ -240,27 +231,4 @@ class MyComponent extends React.Component {
   }
 }
 
-// ========================================
-
-ReactDOM.render(
-  <StyleGuide>
-    <DescribedMock title="FOO">{`
-      # Some markdown title
-
-      And some descriptive text
-
-      `}
-      <Embed caption="My Caption" height="" width="" background="">
-        <div><h1>Hallo</h1></div>
-      </Embed>
-      <Embed caption="Met classname foo" height="" width="" background="">
-        <div><h1 className="foo">Hallo</h1></div>
-      </Embed>
-      # Some other title
-      <Embed caption="The OTHER component">
-        <HucForm />
-      </Embed>
-    </DescribedMock>
-  </StyleGuide>,
-  document.getElementById('container')
-);
+export default StyleGuide;
