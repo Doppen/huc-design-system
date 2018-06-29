@@ -11,7 +11,7 @@ function isDefaultProp (defaultProps, key, value) {
   if (!defaultProps) {
     return false;
   }
-  return defaultProps[key] === value; 
+  return defaultProps[key] === value;
 }
 
 function stringifyObject (object, opts) {
@@ -20,6 +20,7 @@ function stringifyObject (object, opts) {
     result = object.map(item => stringifyObject(item));
   } else if (object && typeof object === 'object') {
     result = {};
+    // eslint-disable-next-line
     Object.keys(object).map(key => {
       let value = object[key];
       if (React.isValidElement(value)) {
