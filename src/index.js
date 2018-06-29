@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Input, InputMulti, Button, HucForm} from './form';
-import './index.css';
+const Fragment = React.Fragment;
 
 
-
+//MRK 2d: in seperate file
 const md = window.markdownit();
 function asArray(val) {
   return Array.isArray(val) ? val : (val == null ? [] : [val]);
@@ -169,13 +169,9 @@ function jsxToString (component, options) {
 class StyleGuide extends React.Component {
   render() {
     const children = asArray(this.props.children);
-    const toc = children.map(x => x.props.title).map(title => <li>{title}</li>)
 
     return (
       <div className="markdown-body">
-        <ul>
-          {toc}
-        </ul>
         {children[0]}
       </div>
     );
@@ -207,7 +203,8 @@ class DescribedMock extends React.Component {
       });
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <a name={this.props.title}></a>
+        <h2>{this.props.title}</h2>
         {children}
       </div>
     );
@@ -218,34 +215,33 @@ class DescribedMock extends React.Component {
 class Embed extends React.Component {
   render() {
     return (
-      <div>
-      <div style={{fontWeight: "bold"}}>{this.props.caption}</div>
-      <div style={{padding: "1em", boxShadow: "inset 0px 0px 10px #000",  borderRadius: 5}}>{this.props.children}</div>
-        <pre>
-          <code>
-            {jsxToString(this.props.children)}
-          </code>
-        </pre>
+      <div className="hds-showComp">
+        <div className="hds-showComp-title">{this.props.caption}</div>
+        <div className="hds-showComp-components">
+          <div className="hds-showComp-label">Component</div>
+          {this.props.children}
+        </div>
+        <div className="hds-showComp-code">
+          <div className="hds-showComp-label">Code usage</div>
+          <pre>
+            <code>
+              {jsxToString(this.props.children)}
+            </code>
+          </pre>
+        </div>
       </div>
     );
   }
 }
 
 
-class MyComponent extends React.Component {
-  render() {
-    return (
-      <div style={{border: "thin red solid", width: 100, height: 40}}>MyComponent</div>
-    );
-  }
-}
-
 // ========================================
+// MRK 2d: generate from Gulp
 
 ReactDOM.render(
+  <Fragment>
   <StyleGuide>
-    <DescribedMock title="FOO">{`
-      # Some markdown title
+    <DescribedMock title="Basics">{`
 
       And some descriptive text
 
@@ -261,6 +257,26 @@ ReactDOM.render(
         <HucForm />
       </Embed>
     </DescribedMock>
-  </StyleGuide>,
+  </StyleGuide>
+  <StyleGuide>
+    <DescribedMock title="data entry">{`
+
+
+      And some descriptive text
+
+      `}
+      <Embed caption="My Caption" height="" width="" background="">
+        <div><h1>Hallo</h1></div>
+      </Embed>
+      <Embed caption="Met classname foo" height="" width="" background="">
+        <div><h1 className="foo">Hallo</h1></div>
+      </Embed>
+      # Some other title
+      <Embed caption="The OTHER component">
+        <HucForm />
+      </Embed>
+    </DescribedMock>
+  </StyleGuide>
+  </Fragment>,
   document.getElementById('container')
 );

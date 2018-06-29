@@ -1,0 +1,55 @@
+.hds {
+  display: flex; }
+
+.hds-aside {
+  background-color: #fafafa;
+  width: 200px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.hds-aside img {
+  width: 70px;
+  height: auto;
+  margin: 0  0 2em 0; }
+
+.hds-nav {
+  display: flex;
+  flex-direction: column; }
+
+.hds-content {
+  width: calc(100% - 200px);
+  padding: 3em; }
+
+nav {
+  display: flex;
+  flex-direction: column; }
+
+nav > * {
+  margin: 0  0 1em 0; }
+
+.hds-showComp {
+  margin: 0  0 6em 0; }
+
+.hds-showComp-title {
+  font-weight: bold; }
+
+.hds-showComp-components {
+  background-color: #f5efe9;
+  padding: 1em;
+  margin: 0 -1em; }
+
+.hds-showComp-code {
+  padding: 1em;
+  margin: 0 -1em;
+  background-color: #fafafa; }
+
+.hds-showComp-code pre {
+  margin: 0 !important; }
+
+.hds-showComp-label {
+  font-size: .7em;
+  float: right;
+  opacity: .3;
+  margin-top: -1em; }
