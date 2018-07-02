@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const md = window.markdownit();
 function asArray(val) {
   return Array.isArray(val) ? val : (val == null ? [] : [val]);
@@ -162,6 +161,7 @@ function jsxToString (component, options) {
   }
 }
 
+
 export class StyleGuide extends React.Component {
   render() {
     const children = asArray(this.props.children);
@@ -229,5 +229,6 @@ export class Embed extends React.Component {
     );
   }
 }
+
 
 export default StyleGuide;
