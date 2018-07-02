@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {StyleGuide, DescribedMock, Embed} from './component-view';
 import {Input, InputMulti, Button, HucForm} from './form';
+import {AtomImput} from './data-entry';
 const Fragment = React.Fragment;
 
 
@@ -19,7 +20,7 @@ ReactDOM.render(
 
       `}
       <Embed caption="My Caption" description="Basic components">
-        <div><h1>Hallo</h1></div>
+        <AtomImput />
       </Embed>
       <Embed caption="Met classname foo"  description="Basic components with form">
         <div><h1 className="foo">Hallo</h1></div>
