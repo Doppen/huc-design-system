@@ -18,33 +18,14 @@ ReactDOM.render(
       And some descriptive text
 
       `}
-      <Embed caption="My Caption" height="" width="" background="">
+      <Embed caption="My Caption" description="Basic components">
         <div><h1>Hallo</h1></div>
       </Embed>
-      <Embed caption="Met classname foo" height="" width="" background="">
+      <Embed caption="Met classname foo"  description="Basic components with form">
         <div><h1 className="foo">Hallo</h1></div>
       </Embed>
       # Some other title
-      <Embed caption="The OTHER component">
-        <HucForm />
-      </Embed>
-    </DescribedMock>
-  </StyleGuide>
-  <StyleGuide>
-    <DescribedMock title="data entry">{`
-
-
-      And some descriptive text
-
-      `}
-      <Embed caption="My Caption" height="" width="" background="">
-        <div><h1>Hallo</h1></div>
-      </Embed>
-      <Embed caption="Met classname foo" height="" width="" background="">
-        <div><h1 className="foo">Hallo</h1></div>
-      </Embed>
-      # Some other title
-      <Embed caption="The OTHER component">
+      <Embed caption="The OTHER component" description="Basic components with form">
         <HucForm />
       </Embed>
     </DescribedMock>

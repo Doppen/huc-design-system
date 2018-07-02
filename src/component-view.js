@@ -198,11 +198,10 @@ export class DescribedMock extends React.Component {
         }
       });
     return (
-      <div>
-        <a name={this.props.title}></a>
+      <section id={this.props.title}>
         <h2>{this.props.title}</h2>
         {children}
-      </div>
+      </section>
     );
   }
 }
@@ -213,6 +212,7 @@ export class Embed extends React.Component {
     return (
       <div className="hds-showComp">
         <div className="hds-showComp-title">{this.props.caption}</div>
+        <div className="hds-showComp-description">{this.props.description}</div>
         <div className="hds-showComp-components">
           <div className="hds-showComp-label">Component</div>
           {this.props.children}
