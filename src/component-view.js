@@ -1,5 +1,4 @@
-import React from 'react';
-
+//MRK 2d: in seperate file
 const md = window.markdownit();
 function asArray(val) {
   return Array.isArray(val) ? val : (val == null ? [] : [val]);
@@ -161,16 +160,12 @@ function jsxToString (component, options) {
   }
 }
 
-class StyleGuide extends React.Component {
+export default class StyleGuide extends React.Component {
   render() {
     const children = asArray(this.props.children);
-    const toc = children.map(x => x.props.title).map(title => <li>{title}</li>)
 
     return (
       <div className="markdown-body">
-        <ul>
-          {toc}
-        </ul>
         {children[0]}
       </div>
     );
@@ -202,7 +197,8 @@ export class DescribedMock extends React.Component {
       });
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <a name={this.props.title}></a>
+        <h2>{this.props.title}</h2>
         {children}
       </div>
     );
@@ -213,22 +209,21 @@ export class DescribedMock extends React.Component {
 export class Embed extends React.Component {
   render() {
     return (
-      <div>
-      <div style={{padding: "1em", boxShadow: "inset 0px 0px 10px #000",  borderRadius: 5}}>{this.props.children}</div>
-      <div style={{textAlign: "right", fontWeight: "bold"}}>{this.props.caption}</div>
-      {jsxToString(this.props.children)}
+      <div className="hds-showComp">
+        <div className="hds-showComp-title">{this.props.caption}</div>
+        <div className="hds-showComp-components">
+          <div className="hds-showComp-label">Component</div>
+          {this.props.children}
+        </div>
+        <div className="hds-showComp-code">
+          <div className="hds-showComp-label">Code usage</div>
+          <pre>
+            <code>
+              {jsxToString(this.props.children)}
+            </code>
+          </pre>
+        </div>
       </div>
     );
   }
 }
-
-
-export class MyComponent extends React.Component {
-  render() {
-    return (
-      <div style={{border: "thin red solid", width: 100, height: 40}}>MyComponent</div>
-    );
-  }
-}
-
-export default StyleGuide;
