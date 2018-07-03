@@ -199,7 +199,7 @@ export class DescribedMock extends React.Component {
       });
     return (
       <section id={this.props.title}>
-        <h2>{this.props.title}</h2>
+        <h1>{this.props.title}</h1>
         {children}
       </section>
     );

@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {StyleGuide, DescribedMock, Embed} from './component-view';
-//import {Input, InputMulti, Button, HucForm} from './form';
-  import AtomImput from './data-entry';
-  import HucButton from './data-entry';
+  import { AtomImput } from './data-entry';
+  import { HucButton } from './data-entry';
 const Fragment = React.Fragment;
 
 
@@ -21,7 +20,8 @@ ReactDOM.render(
             <AtomImput />
           </Embed>
           <Embed caption="Basic button" description="A simple button">
-            <HucButton />
+            <HucButton
+            />
           </Embed>
 
       </DescribedMock>
