@@ -1,11 +1,14 @@
 import React from 'react';
+import './css/huc-data-entry.css';
 const Fragment = React.Fragment;
+
 
   export class AtomImput extends React.Component {
     render() {
       return (
         <Fragment>
-          <input type="{this.props.text}" name="{this.props.name}" placeholder="{this.props.placeholder}" />
+          <label htmlFor={this.props.name} className="form-label">{this.props.name}</label>
+          <input type={this.props.text} name={this.props.name} placeholder={this.props.placeholder} />
         </Fragment>
       );
     }
@@ -14,7 +17,7 @@ const Fragment = React.Fragment;
     render() {
       return (
         <Fragment>
-          <button>
+          <button className="button-save button">
             {this.props.label}
           </button>
         </Fragment>

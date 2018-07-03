@@ -15,15 +15,22 @@ ReactDOM.render(
     <StyleGuide>
       <DescribedMock title="Data entry">
         Components for data entry, forms and uploads.
-
+    
           <Embed caption="Basic input" description="A simple imput field">
-            <AtomImput />
+            <AtomImput
+          
+              type="text"
+              name="FamilyName"
+              placeholder="Jansen"
+            />
           </Embed>
           <Embed caption="Basic button" description="A simple button">
             <HucButton
+          
+              label="Save"
             />
           </Embed>
-
+    
       </DescribedMock>
     </StyleGuide>
 

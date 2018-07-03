@@ -1,0 +1,47 @@
+.test {
+  display: none; }
+
+.huc-form {
+  max-width: 500px;
+  padding: 0 1.5em; }
+
+.huc-form-element {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 3em 0; }
+
+.form-label {
+  font-weight: bold;
+  margin: 0 0 .3em 0; }
+
+.fieldgroup {
+  display: flex;
+  flex-direction: column; }
+
+.fieldgroup-item {
+  display: flex;
+  flex-direction: column; }
+
+.fieldgroup label {
+  font-weight: normal; }
+
+input {
+  padding: .6em;
+  border-radius: 2px;
+  border: 1px solid #adadad;
+  font-size: 1em;
+  margin-right: .5em; }
+
+input::placeholder {
+  font-style: italic;
+  color: #b8b8b8; }
+
+.button {
+  background-color: #cccccc;
+  padding: .6em;
+  border-radius: 2px;
+  font-size: 1em;
+  border: none; }
+
+.button-save {
+  background-color: #39ec85; }
