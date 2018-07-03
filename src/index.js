@@ -1,36 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {StyleGuide, DescribedMock, Embed} from './component-view';
-import {Input, InputMulti, Button, HucForm} from './form';
-import {AtomImput} from './data-entry';
+//import {Input, InputMulti, Button, HucForm} from './form';
+  import AtomImput from './data-entry';
+  import HucButton from './data-entry';
 const Fragment = React.Fragment;
 
 
 
 
-// ========================================
-// NOTE 2d: generate from Gulp
 
 ReactDOM.render(
   <Fragment>
-  <StyleGuide>
-    <DescribedMock title="Basics">{`
 
-      And some descriptive text
+    <StyleGuide>
+      <DescribedMock title="Data entry">
+        Components for data entry, forms and uploads.
 
-      `}
-      <Embed caption="My Caption" description="Basic components">
-        <AtomImput />
-      </Embed>
-      <Embed caption="Met classname foo"  description="Basic components with form">
-        <div><h1 className="foo">Hallo</h1></div>
-      </Embed>
-      # Some other title
-      <Embed caption="The OTHER component" description="Basic components with form">
-        <HucForm />
-      </Embed>
-    </DescribedMock>
-  </StyleGuide>
+          <Embed caption="Basic input" description="A simple imput field">
+            <AtomImput />
+          </Embed>
+          <Embed caption="Basic button" description="A simple button">
+            <HucButton />
+          </Embed>
+
+      </DescribedMock>
+    </StyleGuide>
+
   </Fragment>,
   document.getElementById('container')
 );
