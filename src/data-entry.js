@@ -13,7 +13,7 @@ const Fragment = React.Fragment;
       );
     }
   }
-  export class HucButton extends React.Component {
+  export class AtomButton extends React.Component {
     render() {
       return (
         <Fragment>
@@ -24,3 +24,16 @@ const Fragment = React.Fragment;
       );
     }
   }
+  export class MolecSearch extends React.Component {
+    render() {
+      return (
+        <Fragment>
+          <div className="huc-form-element">
+            <AtomImput />
+            <AtomButton />
+          </div>
+        </Fragment>
+      );
+    }
+  }
+  

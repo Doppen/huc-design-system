@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {StyleGuide, DescribedMock, Embed} from './component-view';
   import { AtomImput } from './data-entry';
-  import { HucButton } from './data-entry';
+  import { AtomButton } from './data-entry';
+  import { MolecSearch } from './data-entry';
 const Fragment = React.Fragment;
 
 
@@ -25,9 +26,17 @@ ReactDOM.render(
             />
           </Embed>
           <Embed caption="Basic button" description="A simple button">
-            <HucButton
+            <AtomButton
           
               label="Save"
+            />
+          </Embed>
+          <Embed caption="Search field" description="A simple search field">
+            <MolecSearch
+          
+              type="text"
+              name="Text search"
+              label="Search"
             />
           </Embed>
     
