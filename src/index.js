@@ -16,14 +16,7 @@ ReactDOM.render(
       <DescribedMock title="Data entry">
         Components for data entry, forms and uploads.
 
-          <Embed caption="Search field" description="">
-            <HcSearch
-              description="text"
-              name="Text search"
-              label="Search"
-              placeholder="Example: Huygens"
-            />
-          </Embed>
+
 
           <Embed caption="Basic input" description="">
             <HcFormInput
@@ -60,6 +53,15 @@ ReactDOM.render(
           <Embed caption="Coordinates field" description="">
             <HcFormCoordinats
               description=""
+            />
+          </Embed>
+
+          <Embed caption="Search field" description="">
+            <HcSearch
+              description="text"
+              name="Text search"
+              label="Search"
+              placeholder="Example: Huygens"
             />
           </Embed>
 

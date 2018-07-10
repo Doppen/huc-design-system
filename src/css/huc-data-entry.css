@@ -108,13 +108,16 @@ input::placeholder {
   padding: .1em; }
 
 .icon {
-  min-width: 50px; }
-
-.iconDate {
-  background-image: url("../images/icons/datePicker.svg");
+  min-width: 50px;
   background-size: 66% 66%;
   background-repeat: no-repeat;
   background-position: center; }
+
+.iconDate {
+  background-image: url("../images/icons/datePicker.svg"); }
+
+.iconSearch {
+  background-image: url("../images/icons/searchGlass.svg"); }
 
 .huc-list li {
   list-style: none;
