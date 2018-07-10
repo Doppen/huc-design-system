@@ -56,6 +56,7 @@ ReactDOM.render(
             />
           </Embed>
 
+
           <Embed caption="Search field" description="">
             <HcSearch
               description="text"
@@ -63,6 +64,10 @@ ReactDOM.render(
               label="Search"
               placeholder="Example: Huygens"
             />
+          </Embed>
+
+          <Embed caption="Items browser" description="">
+            <HcFormItemBrowser />
           </Embed>
 
 

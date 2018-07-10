@@ -138,8 +138,31 @@ export class HcFormCoordinats extends React.Component {
 export class HcFormItemBrowser extends React.Component {
   render() {
     return (
-      <Fragment>
-      </Fragment>
+      <div className="huc-form-nBrows">
+        <div className="huc-form-nBrows-head">
+          {this.props.label}
+        </div>
+        <div className="huc-form-nBrows-window">
+          <div className="huc-list-view">
+            <ul className="huc-form-nBrows-list huc-list">
+              <li>John</li>
+              <li>Paul</li>
+              <li className="huc-list-selected">George</li>
+              <li>Ringo</li>
+            </ul>
+
+          </div>
+          <div className="huc-form-nBrows-edit">
+          <HcFormPerson description="" />
+            <div className="huc-action-bar">
+              <div className="button"></div>
+              <div className="button">New Person</div>
+              <div className="button"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     );
   }
 }
