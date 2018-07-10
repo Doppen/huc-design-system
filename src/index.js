@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {StyleGuide, DescribedMock, Embed} from './component-view';
-// eslint-disable-next-line
+
 import { HcSearch,HcFormInput,HcFormImage,HcFormDate,HcFormPerson,HcFormCoordinats,HcFormItemBrowser } from './data-entry';
+import { HucResults } from './search';
 const Fragment = React.Fragment;
 
 
@@ -61,6 +62,7 @@ ReactDOM.render(
             <HcSearch
               description="text"
               name="Text search"
+              onClick={() => window.alert("yooh")}
               label="Search"
               placeholder="Example: Huygens"
             />
@@ -69,6 +71,20 @@ ReactDOM.render(
           <Embed caption="Items browser" description="">
             <HcFormItemBrowser />
           </Embed>
+
+
+      </DescribedMock>
+    </StyleGuide>
+
+    <StyleGuide>
+      <DescribedMock title="Search and results">
+        Components for search, facetted search, results lists, cards ect.
+
+          <Embed caption="Basic results" description="">
+            <HucResults/>
+          </Embed>
+
+
 
 
       </DescribedMock>

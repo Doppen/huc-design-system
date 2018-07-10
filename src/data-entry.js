@@ -43,7 +43,7 @@ export class HcSearch extends React.Component {
         <FromDescription description={this.props.description} />
         <div className="huc-connect-elements">
           <input type="text" name={this.props.name} placeholder={this.props.placeholder} />
-          <button className="button icon iconSearch"></button>
+          <button onClick={this.props.onClick} className="button icon iconSearch"></button>
         </div>
       </div>
     );
