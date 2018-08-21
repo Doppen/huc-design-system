@@ -4,15 +4,8 @@ import {StyleGuide, DescribedMock, Embed} from './component-view';
 
 import { HcSearch,HcFormInput,HcFormImage,HcFormDate,HcFormPerson,HcFormCoordinats,HcFormItemBrowser } from './data-entry';
 import { HucResults } from './search';
-const Fragment = React.Fragment;
-
-
-
-
 
 ReactDOM.render(
-  <Fragment>
-
     <StyleGuide>
       <DescribedMock title="Data entry">
         Components for data entry, forms and uploads.
@@ -74,9 +67,6 @@ ReactDOM.render(
 
 
       </DescribedMock>
-    </StyleGuide>
-
-    <StyleGuide>
       <DescribedMock title="Search and results">
         Components for search, facetted search, results lists, cards ect.
 
@@ -88,8 +78,6 @@ ReactDOM.render(
 
 
       </DescribedMock>
-    </StyleGuide>
-
-  </Fragment>,
+    </StyleGuide>,
   document.getElementById('container')
 );
