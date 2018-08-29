@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/huc-data-entry.css';
+import './css/huc-connect-sets.css';
 const Fragment = React.Fragment;
 
 
@@ -91,6 +92,7 @@ export class HcFormDate extends React.Component {
   }
 }
 
+
 export class HcFormPerson extends React.Component {
   render() {
     return (
@@ -134,6 +136,98 @@ export class HcFormCoordinats extends React.Component {
     );
   }
 }
+
+
+export class HclistBox extends React.Component {
+  render() {
+    return (
+      <div>
+        <div className="huc-ConnectSets-header">
+          <div className="huc-ConnectSets-title"><strong>{this.props.name}</strong></div>
+          <div className="huc-ConnectSets-filter"> <input type="text" className="list-filter" placeholder="Filter"/></div>
+        </div>
+        <div className="list-container">
+          <table className="huc-list">
+            <tr>
+              <td>{this.props.name} 1</td>
+              <td>Clariah</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 2</td>
+              <td>Huc</td>
+            </tr>
+            <tr className="huc-list-active">
+              <td>{this.props.name} 3</td>
+              <td>Clariah</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 4</td>
+              <td>Huc</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 5</td>
+              <td>Clariah</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 6</td>
+              <td>Huc</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 7</td>
+              <td>Clariah</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 8</td>
+              <td>Huc</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 9</td>
+              <td>Clariah</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 10</td>
+              <td>Huc</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 11</td>
+              <td>Clariah</td>
+            </tr>
+            <tr>
+              <td>{this.props.name} 12</td>
+              <td>Huc</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+export class HcConnectSets extends React.Component {
+  render() {
+    return (
+      <div class="huc-ConnectSets">
+        <div class="rootList">
+          <HclistBox name="Resources" />
+        </div>
+        <div class="col2">
+          <div class="dependList">
+            <HclistBox name="Services" />
+          </div>
+
+          <div class="huc-console">
+            <div class="huc-console-message">Proces Resource 3 (Clariah) with:<br/>
+            Service 2 (Wp2)?
+            </div>
+            <div class="huc-console-action"><button>Deploy</button></div>
+          </div>
+        </div> 
+      </div>
+    );
+  }
+}
+
 
 export class HcFormItemBrowser extends React.Component {
   render() {

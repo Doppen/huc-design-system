@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {StyleGuide, DescribedMock, Embed} from './component-view';
 
-import { HcSearch,HcFormInput,HcFormImage,HcFormDate,HcFormPerson,HcFormCoordinats,HcFormItemBrowser } from './data-entry';
+import { HcSearch,HcFormInput,HcFormImage,HcFormDate,HcFormPerson,HcFormCoordinats,HcFormItemBrowser, HcConnectSets } from './data-entry';
 import { HucResults } from './search';
 
 ReactDOM.render(
@@ -77,6 +77,14 @@ ReactDOM.render(
 
 
 
+      </DescribedMock>
+
+      <DescribedMock title="Custom components">
+
+
+          <Embed caption="Connect sets" description="Connect two entitites with search search and browser.">
+            <HcConnectSets/>
+          </Embed>
       </DescribedMock>
     </StyleGuide>,
   document.getElementById('container')
