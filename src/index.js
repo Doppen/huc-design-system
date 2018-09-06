@@ -85,6 +85,8 @@ ReactDOM.render(
           <Embed caption="Connect sets" description="Connect two entitites with search search and browser.">
             <HcConnectSets/>
           </Embed>
+
+
       </DescribedMock>
     </StyleGuide>,
   document.getElementById('container')

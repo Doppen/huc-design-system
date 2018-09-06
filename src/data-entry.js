@@ -222,11 +222,28 @@ export class HcConnectSets extends React.Component {
             </div>
             <div class="huc-console-action"><button>Deploy</button></div>
           </div>
-        </div> 
+        </div>
       </div>
     );
   }
 }
+
+
+export class HcCombo extends React.Component {
+    state = {
+      teams: [{"value": "vtest1","display": "dtest1"},{"value": "vtest2","display": "dtest2"}]
+    }
+
+    render() {
+      return (
+        <div>
+          <select>
+            {this.state.teams.map((team) => <option key={team.value} value={team.value}>{team.display}</option>)}
+          </select>
+        </div>
+      )
+    }
+  }
 
 
 export class HcFormItemBrowser extends React.Component {
